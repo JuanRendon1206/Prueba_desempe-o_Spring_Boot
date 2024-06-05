@@ -9,5 +9,5 @@ import com.riwi.pruebaDesempenoSpringBoot.domain.entities.ClassEntity;
 
 @Repository
 public interface ClassRepository extends JpaRepository<ClassEntity, Long>{
-    Page<ClassEntity> findByNameOrDescriptionAndActive(String name, String description, PageRequest pagination, Boolean active); 
+    Page<ClassEntity> findByNameContainingAndDescriptionContainingAndActive(String name, String description, PageRequest pagination, Boolean active); 
 }
