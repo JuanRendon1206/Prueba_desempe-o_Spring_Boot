@@ -1,5 +1,7 @@
 package com.riwi.pruebaDesempenoSpringBoot.api.dto.request;
 
+import java.util.List;
+
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -26,4 +28,6 @@ public class LessonRequest {
 
     @NotNull(message = "Class is required")
     private Long class_id;
+
+    private List<MultimediaRequest> multimedias;
 }
